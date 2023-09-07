@@ -14,12 +14,12 @@ class GetInfoView(View):
         current_day = datetime.now().strftime('%A')
 
         # Get current UTC time with a +/-2 minute window
-        utc_time = datetime.utcnow().replace(tzinfo=pytz.UTC)
+        utc_time = datetime.utcnow()
         utc_time = utc_time + timedelta(minutes=2)
         utc_time = utc_time.strftime('%Y-%m-%dT%H:%M:%SZ')
 
         # Construct GitHub URLs
-        github_file_url = "https://github.com/username/repo/blob/main/file_name.ext"
+        github_file_url = "https://github.com/Majefashek/HNGProject_1/blob/main/project001/apiEndpoint/views.py"
         github_repo_url = "https://github.com/Majefashek/HNGProject_1"
 
         # Prepare the JSON response
