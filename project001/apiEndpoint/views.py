@@ -20,7 +20,7 @@ class GetInfoView(View):
 
         # Construct GitHub URLs
         github_file_url = "https://github.com/username/repo/blob/main/file_name.ext"
-        github_repo_url = "https://github.com/username/repo"
+        github_repo_url = "https://github.com/Majefashek/HNGProject_1"
 
         # Prepare the JSON response
         response = {
