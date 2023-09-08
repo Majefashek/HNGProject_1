@@ -17,9 +17,8 @@ class GetInfoView(View):
         # Calculate the Nigerian time by adding 1 hour (60 minutes)
         nigerian_time = utc_time + timedelta(minutes=60)
 
-        # Format the time as a string with the Nigerian time zone offset
+        # Format the Nigerian time in the desired format
         nigerian_time_str = nigerian_time.strftime('%Y-%m-%dT%H:%M:%SZ')
-
         # Get current UTC time with a +/-2 minute window
        
         # Construct GitHub URLs
