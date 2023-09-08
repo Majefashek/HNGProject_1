@@ -15,7 +15,7 @@ class GetInfoView(View):
         utc_time = datetime.utcnow()
 
         # Calculate the Nigerian time by adding 1 hour (60 minutes)
-        nigerian_time = utc_time + timedelta(minutes=60)
+        nigerian_time = utc_time
 
         # Format the Nigerian time in the desired format
         nigerian_time_str = nigerian_time.strftime('%Y-%m-%dT%H:%M:%SZ')
