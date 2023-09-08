@@ -12,12 +12,16 @@ class GetInfoView(View):
 
         # Get current day of the week
         current_day = datetime.now().strftime('%A')
+        utc_time = datetime.utcnow()
+
+        # Calculate the Nigerian time by adding 1 hour (60 minutes)
+        nigerian_time = utc_time + timedelta(minutes=60)
+
+        # Format the time as a string with the Nigerian time zone offset
+        nigerian_time_str = nigerian_time.strftime('%Y-%m-%dT%H:%M:%SZ')
 
         # Get current UTC time with a +/-2 minute window
-        utc_time = datetime.utcnow()
-        utc_time = utc_time + timedelta(minutes=2)
-        utc_time = utc_time.strftime('%Y-%m-%dT%H:%M:%SZ')
-
+       
         # Construct GitHub URLs
         github_file_url = "https://github.com/Majefashek/HNGProject_1/blob/main/project001/apiEndpoint/views.py"
         github_repo_url = "https://github.com/Majefashek/HNGProject_1"
@@ -26,7 +30,7 @@ class GetInfoView(View):
         response = {
             "slack_name": slack_name,
             "current_day": current_day,
-            "utc_time": utc_time,
+            "utc_time": nigerian_time_str,
             "track": track,
             "github_file_url": github_file_url,
             "github_repo_url": github_repo_url,

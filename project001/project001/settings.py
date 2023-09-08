@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-ALLOWED_HOSTS = ['https://get-slack-details-endpoint.onrender.com']
+#ALLOWED_HOSTS = ['https://get-slack-details-endpoint.onrender.com']
+ALLOWED_HOSTS = []
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-7no2st269^che@a6c!%i8j$h6b3ud$13v4sz=v78ke!9=%quvo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['get-slack-details-endpoint.onrender.com']
+#ALLOWED_HOSTS = ['get-slack-details-endpoint.onrender.com']
 
 
 # Application definition
